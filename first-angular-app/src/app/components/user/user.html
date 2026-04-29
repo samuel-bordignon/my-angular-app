@@ -1,1 +1,8 @@
-<p>user works!</p>
+<div class="">
+    <button (click)="onselectUser()">
+        <img 
+        [src]="imagePath" 
+        [alt]="selectedUser.name">
+        <span>{{selectedUser.name}}</span>
+    </button>
+</div>
