@@ -1,9 +1,9 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, input, Input, signal } from '@angular/core';
 
 import { DUMMY_USERS } from '../../../data/dummy-users';
 
 const ramdomID = Math.floor(Math.random() * DUMMY_USERS.length)
-const bananas = ["banana1","banana2","banana3","banana4","banana5","banana6"]
+const bananas = ["banana1", "banana2", "banana3", "banana4", "banana5", "banana6"]
 
 @Component({
   selector: 'app-user',
@@ -12,18 +12,20 @@ const bananas = ["banana1","banana2","banana3","banana4","banana5","banana6"]
   styleUrl: './user.css',
 })
 export class UserComponent {
-  selectedUser = signal(DUMMY_USERS[ramdomID]);
-  banana = signal(bananas[ramdomID])
-  imagePath = computed(()=>"assets/users/" + this.selectedUser().avatar)
-  // get imagePath() {
-  //   return `assets/users/${this.selectedUser.get("")avatar}`;
-  // }
-  ramdomBananas(){
-      const randomID = Math.floor(Math.random() * DUMMY_USERS.length);
-      this.banana.set(bananas[randomID]);
+  @Input({required:true}) avatar!: string
+  @Input({required:true}) name!: string
+  
+  get imagePath() {
+      return `assets/users/${this.avatar}`;
+    }
+    onselectUser() {}
+    
+    // Abordagem com signalInputs
+    
+    // avatar = input.required<string>()
+    // name = input.required<string>()
+  
+    // imagePath = computed(()=>{
+    //     return 'assets/users/' + this.avatar()
+    // })
   }
-  onselectUser() {
-    const randomID = Math.floor(Math.random() * DUMMY_USERS.length);
-    this.selectedUser.set(DUMMY_USERS[randomID]);
-  }
-}
