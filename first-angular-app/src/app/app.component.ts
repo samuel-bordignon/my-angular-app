@@ -13,4 +13,7 @@ import { DUMMY_USERS } from '../data/dummy-users';
 export class App {
   protected readonly title = signal('first-angular-app');
   users = DUMMY_USERS
+  onSelectUser(id:Pick<UserComponent, "id">){
+    console.log(`Printando o ID do usuário: ${id}`)
+  }
 }
