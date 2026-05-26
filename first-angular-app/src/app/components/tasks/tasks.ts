@@ -16,10 +16,10 @@ export class TasksComponent {
 
   tasks = DUMMY_TASKS
 
-  get selectedTasks(){
-    return this.tasks.filter(task=>task.userId == this.userId)
+  get selectedTasks() {
+    return this.tasks.filter(task => task.userId == this.userId)
   }
-  onSelecedUser(name: string){
+  onSelecedUser(name: string) {
     this.userName = name
   }
 }
