@@ -12,7 +12,7 @@ import { NewTaskComponent } from './new-task/new-task';
 export class TasksComponent {
   @Input({ required: true }) userName?: string
   @Input({ required: true }) userId?: string
-  @Input({ required: true }) newTaskActive: boolean = false
+  isOpenNewTask: boolean = false
 
   tasks = DUMMY_TASKS
 
@@ -26,8 +26,14 @@ export class TasksComponent {
     this.tasks = this.tasks.filter(task => task.id !== taskId)
   }
   onNewTask() {
-    this.newTaskActive = !this.newTaskActive
-    console.log(this.newTaskActive)
+    this.isOpenNewTask = !this.isOpenNewTask
+  }
+  onCloseNewTask() {
+    this.isOpenNewTask = false
+  }
+  onAddNewTask() {
+    // Aqui você pode adicionar a lógica para criar uma nova tarefa
+    this.onCloseNewTask()
   }
 }
 

@@ -14,7 +14,7 @@
         </li>
         }
     </ul>
-    @if(newTaskActive){
-    <app-new-task />
+    @if(isOpenNewTask){
+    <app-new-task (closeModal)="onCloseNewTask()" (addTask)="onAddNewTask()"/>
     }
 </section>

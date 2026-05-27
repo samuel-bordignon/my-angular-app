@@ -12,7 +12,7 @@ export class TaskComponent {
   @Input({required:true}) task!: Task
   @Output() select = new EventEmitter()
 
-  onCompleteTask (){
+  onCompleteTask(){
     this.select.emit(this.task.id)
   }
 }
