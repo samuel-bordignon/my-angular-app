@@ -2,14 +2,19 @@
     <header>
         <h2>Tarefas de {{userName}}</h2>
         <menu>
-            <button>Adicionar tarefas</button>
+            <button (click)="onNewTask()">
+                Adicionar tarefas
+            </button>
         </menu>
     </header>
     <ul>
         @for (task of selectedTasks; track task.id){
-            <li>
-                <app-task (select)="onCompleteTask($event)" [task]="task"/>
-            </li>
+        <li>
+            <app-task (select)="onCompleteTask($event)" [task]="task" />
+        </li>
         }
     </ul>
+    @if(newTaskActive){
+    <app-new-task />
+    }
 </section>
