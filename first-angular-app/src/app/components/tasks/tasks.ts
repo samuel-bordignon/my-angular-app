@@ -2,8 +2,6 @@ import { Component, Input } from '@angular/core';
 import { TaskComponent } from "./task/task";
 import { DUMMY_TASKS } from '../../../data/dummy-tasks';
 
-
-
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.html',
@@ -21,5 +19,8 @@ export class TasksComponent {
   }
   onSelecedUser(name: string) {
     this.userName = name
+  }
+  onCompleteTask(taskId:string){
+    this.tasks = this.tasks.filter(task => task.id !== taskId)
   }
 }
