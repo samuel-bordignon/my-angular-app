@@ -1,8 +1,9 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-new-task',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './new-task.html',
   styleUrl: './new-task.css',
 })
@@ -10,12 +11,15 @@ export class NewTaskComponent {
   @Output() closeModal = new EventEmitter<void>()
   @Output() addTask = new EventEmitter()
 
-  cancel(){
+  enteredTitle = '';
+  enteredSummary = '';
+  enteredDate = '';
+
+  cancel() {
     this.closeModal.emit()
   }
-  
-  add(){
-    this.closeModal.emit()
 
+  submit() {
+    this.closeModal.emit()
   }
 }
