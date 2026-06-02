@@ -5,3 +5,5 @@ export type Task = {
   summary: string;
   time: string;
 };
+
+export type CreateTask = Omit<Task, "id" | "userId">

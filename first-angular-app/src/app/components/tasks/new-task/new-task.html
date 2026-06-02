@@ -14,12 +14,12 @@
 
     <p>
       <label for="due-date">Due Date</label>
-      <input type="date" id="due-date" name="due-date" [(ngModel)]="enteredDate"/>
+      <input type="date" id="due-date" name="due-date" [(ngModel)]="enteredTime"/>
     </p>
 
     <p class="actions">
       <button type="button" (click)="cancel()">Cancel</button>
-      <button type="submit" (click)="addTask.emit()">Create</button>
+      <button type="button" (click)="submit()">Create</button>
     </p>
   </form>
 </dialog>

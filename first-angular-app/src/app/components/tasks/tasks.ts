@@ -2,6 +2,8 @@ import { Component, Input } from '@angular/core';
 import { TaskComponent } from "./task/task";
 import { DUMMY_TASKS } from '../../../data/dummy-tasks';
 import { NewTaskComponent } from './new-task/new-task';
+import { type CreateTask } from './tasks.model';
+
 
 @Component({
   selector: 'app-tasks',
@@ -10,8 +12,8 @@ import { NewTaskComponent } from './new-task/new-task';
   imports: [TaskComponent, NewTaskComponent]
 })
 export class TasksComponent {
-  @Input({ required: true }) userName?: string
-  @Input({ required: true }) userId?: string
+  @Input({ required: true }) userName: string = ""
+  @Input({ required: true }) userId: string = ""
   isOpenNewTask: boolean = false
 
   tasks = DUMMY_TASKS
@@ -31,8 +33,13 @@ export class TasksComponent {
   onCloseNewTask() {
     this.isOpenNewTask = false
   }
-  onAddNewTask() {
-    // Aqui você pode adicionar a lógica para criar uma nova tarefa
+  onAddNewTask(data: CreateTask) {
+    console.log(data)
+    this.tasks.push({
+      ...data,
+      id: "t",
+      userId: this.userId
+    })
     this.onCloseNewTask()
   }
 }
