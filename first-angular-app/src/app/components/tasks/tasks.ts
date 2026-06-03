@@ -3,13 +3,14 @@ import { TaskComponent } from "./task/task";
 import { DUMMY_TASKS } from '../../../data/dummy-tasks';
 import { NewTaskComponent } from './new-task/new-task';
 import { type CreateTask } from './tasks.model';
+import { Card } from "../ui/card/card";
 
 
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.html',
   styleUrl: './tasks.css',
-  imports: [TaskComponent, NewTaskComponent]
+  imports: [TaskComponent, NewTaskComponent, Card]
 })
 export class TasksComponent {
   @Input({ required: true }) userName: string = ""

@@ -1,20 +1,22 @@
-<section id="tasks">
-    <header>
-        <h2>Tarefas de {{userName}}</h2>
-        <menu>
-            <button (click)="onNewTask()">
-                Adicionar tarefas
-            </button>
-        </menu>
-    </header>
-    <ul>
-        @for (task of selectedTasks; track task.id){
-        <li>
-            <app-task (select)="onCompleteTask($event)" [task]="task" />
-        </li>
+<app-card>
+    <section id="tasks">
+        <header>
+            <h2>Tarefas de {{userName}}</h2>
+            <menu>
+                <button (click)="onNewTask()">
+                    Adicionar tarefas
+                </button>
+            </menu>
+        </header>
+        <ul>
+            @for (task of selectedTasks; track task.id){
+            <li>
+                <app-task (select)="onCompleteTask($event)" [task]="task" />
+            </li>
+            }
+        </ul>
+        @if(isOpenNewTask){
+        <app-new-task (closeModal)="onCloseNewTask()" (addTask)="onAddNewTask($event)" />
         }
-    </ul>
-    @if(isOpenNewTask){
-    <app-new-task (closeModal)="onCloseNewTask()" (addTask)="onAddNewTask($event)"/>
-    }
-</section>
+    </section>
+</app-card>
