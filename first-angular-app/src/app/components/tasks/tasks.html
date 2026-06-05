@@ -1,9 +1,12 @@
+@if(isOpenNewTask){
+<app-new-task (closeModal)="onCloseNewTask()" [userId]="userId" />
+}
 <app-card>
     <section id="tasks">
         <header>
             <h2>Tarefas de {{userName}}</h2>
             <menu>
-                <button (click)="onNewTask()">
+                <button (click)="onOpenNewTask()">
                     Adicionar tarefas
                 </button>
             </menu>
@@ -11,12 +14,9 @@
         <ul>
             @for (task of selectedTasks; track task.id){
             <li>
-                <app-task (select)="onCompleteTask($event)" [task]="task" />
+                <app-task [task]="task" />
             </li>
             }
         </ul>
-        @if(isOpenNewTask){
-        <app-new-task (closeModal)="onCloseNewTask()" (addTask)="onAddNewTask($event)" />
-        }
     </section>
 </app-card>
