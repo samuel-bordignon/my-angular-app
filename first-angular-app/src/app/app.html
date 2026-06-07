@@ -1,17 +1,19 @@
-<app-header></app-header>
+@if(isOpenNewUser){
+<app-new-user (closeModal)="onCloseNewUser()"/>
+}
+<app-header (openModal)="onOpenNewUser()" />
 <main class="main">
   <ul id="users">
     @for (user of users; track user.id){
-      <li>
-        <app-user (select)="onSelectUser($event)" [user]="user" [selected]="selectedUserId === user.id"./>
-      </li>
+    <li>
+      <app-user (select)="onSelectUser($event)" [user]="user" [selected]="selectedUserId === user.id" . />
+    </li>
     }
-  </ul> 
+  </ul>
   @if (selectedUser){
-    <app-tasks [userName]="selectedUser.name" [userId]="selectedUser.id"/>
+  <app-tasks [userName]="selectedUser.name" [userId]="selectedUser.id" />
   } @else {
-    <p id="fallback">Nenhum usuário selecioando</p>
+  <p id="fallback">Nenhum usuário selecioando</p>
   }
-</main>     
+</main>
 <router-outlet />
- 

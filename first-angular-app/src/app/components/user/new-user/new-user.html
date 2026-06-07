@@ -1,0 +1,9 @@
+<app-modal [title]="modalTitle" [submit]="submit" [cancel]="cancel">
+    <p>
+        <label for="title">Nome</label>
+        <input type="text" id="title" name="title" [(ngModel)]="enteredTitle" />
+    </p>
+
+    <label for="title">Avatar</label>
+    <button class="add-file" type="">Adicionar um arquivo</button>
+</app-modal>
