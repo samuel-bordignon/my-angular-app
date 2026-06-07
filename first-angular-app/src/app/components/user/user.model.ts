@@ -3,3 +3,5 @@ export type User = {
   name: string
   avatar: string
 }
+
+export type CreateUser = Omit<User,"id">

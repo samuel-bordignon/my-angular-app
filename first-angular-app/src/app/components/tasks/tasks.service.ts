@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { DUMMY_TASKS } from "../../../data/dummy-tasks";
-import { CreateTask, Task } from "./tasks.model";
+import { CreateTask } from "./tasks.model";
 
 
 @Injectable({ providedIn: "root" })
@@ -18,7 +18,6 @@ export class TaskService {
   }
 
   addNewTask(data: CreateTask, userId: string) {
-    console.log(data)
     this.tasks.push({
       ...data,
       id: "t" + this.tasks.length,
