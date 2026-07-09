@@ -10,6 +10,7 @@ import { CardComponent } from "./components/ui/card/card.component";
 import { TaskComponent } from "./components/tasks/task/task";
 import { NewTaskComponent } from "./components/tasks/new-task/new-task.component";
 import { FormsModule } from "@angular/forms";
+import { UiModule } from "./components/ui/card/ui.module";
 
 
 @NgModule({
@@ -17,13 +18,12 @@ import { FormsModule } from "@angular/forms";
     AppComponent,
     HeaderComponent,
     UserComponent,
-    CardComponent,
     TasksComponent,
     TaskComponent,
     NewTaskComponent
   ],
   bootstrap: [AppComponent],
-  imports: [BrowserModule, RouterOutlet, FormsModule]
+  imports: [BrowserModule, RouterOutlet, FormsModule, UiModule]
 })
 export class AppModule {
 
