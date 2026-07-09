@@ -1,8 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { TaskComponent } from "./task/task";
-import { NewTaskComponent } from './new-task/new-task';
-import { type CreateTask } from './tasks.model';
-import { Card } from "../ui/card/card";
+import { NewTaskComponent } from './new-task/new-task.component';
 import { TaskService } from './tasks.service';
 
 
@@ -10,14 +8,14 @@ import { TaskService } from './tasks.service';
   selector: 'app-tasks',
   templateUrl: './tasks.html',
   styleUrl: './tasks.css',
-  imports: [TaskComponent, NewTaskComponent, Card]
+  standalone: false,
 })
 export class TasksComponent {
   @Input({ required: true }) userName: string = ""
   @Input({ required: true }) userId: string = ""
   isOpenNewTask: boolean = false
 
-  constructor(private taskService:TaskService){}
+  constructor(private taskService: TaskService) { }
 
   get selectedTasks() {
     return this.taskService.getUserTasks(this.userId)
