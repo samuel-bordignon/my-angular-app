@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
-  imports:[TableComponent, CalculatorComponent, HeaderComponent]
+  styleUrl:'./app.component.css',
+  imports: [TableComponent, CalculatorComponent, HeaderComponent]
 })
-export class AppComponent {}
+export class AppComponent { }

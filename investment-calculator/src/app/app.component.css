@@ -1,0 +1,8 @@
+main {
+  display: grid;
+  grid-auto-flow: row;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 2.5rem auto;
+}
