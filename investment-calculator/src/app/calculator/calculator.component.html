@@ -1,9 +1,9 @@
-<form class="">
-  <div class="input-group">
-    <app-input [label]="'Investimento Inicial'"/>
-    <app-input [label]="'Investimento Anual'"/>
-    <app-input [label]="'Retorno esperado'"/>
-    <app-input [label]="'Duração'"/>
+<form class=''>
+  <div class='input-group'>
+    <app-input id='initial-investment' label='Investimento Inicial' [(value)]='payload.initialInvestment' />
+    <app-input id='annual-investment' label='Investimento Anual' [(value)]='payload.annualInvestment' />
+    <app-input id='expect-return' label='Retorno esperado' [(value)]='payload.expectedReturn' />
+    <app-input id='duration' label='Duração' [(value)]='payload.duration' />
   </div>
-  <button type="submit">Calcular</button>
+  <button type='submit'>Calcular</button>
 </form>

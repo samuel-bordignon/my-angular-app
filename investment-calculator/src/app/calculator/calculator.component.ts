@@ -9,5 +9,10 @@ import { InputComponent } from '../ui/input/input.component';
   styleUrl: './calculator.component.css'
 })
 export class CalculatorComponent {
-
+  payload = {
+    initialInvestment: 0,
+    annualInvestment: 0,
+    expectedReturn: 0,
+    duration: 0
+  }
 }
