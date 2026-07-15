@@ -5,5 +5,5 @@
     <app-input id='expect-return' label='Retorno esperado' [(value)]='payload.expectedReturn' />
     <app-input id='duration' label='Duração' [(value)]='payload.duration' />
   </div>
-  <button type='submit'>Calcular</button>
+  <button type='button' (click)="submit()">Calcular</button>
 </form>

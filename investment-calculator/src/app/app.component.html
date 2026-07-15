@@ -1,8 +1,8 @@
 <main class="">
   <app-header/>
-  <app-calculator/>
+  <app-calculator (submitAnnualData)="onCalculate($event)" />
 
-  @if(false){
+  @if(investmentResults){
     <app-table/>
   }@else {
     <p id="fallback">Clique em "Calcular" para receber resultados</p>

@@ -3,15 +3,14 @@
   <ul id="users">
     @for (user of users; track user.id){
       <li>
-        <app-user (select)="onSelectUser($event)" [user]="user" [selected]="selectedUserId === user.id"./>
+        <app-user (select)="onSelectUser($event)" [user]="user" [selected]="selectedUserId === user.id"/>
       </li>
     }
-  </ul> 
+  </ul>
   @if (selectedUser){
     <app-tasks [userName]="selectedUser.name" [userId]="selectedUser.id"/>
   } @else {
     <p id="fallback">Nenhum usuário selecioando</p>
   }
-</main>     
+</main>
 <router-outlet />
- 
