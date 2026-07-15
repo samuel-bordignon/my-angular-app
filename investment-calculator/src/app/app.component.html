@@ -3,7 +3,7 @@
   <app-calculator (submitAnnualData)="onCalculate($event)" />
 
   @if(investmentResults){
-    <app-table/>
+    <app-table [AnnualData]="investmentResults"/>
   }@else {
     <p id="fallback">Clique em "Calcular" para receber resultados</p>
   }

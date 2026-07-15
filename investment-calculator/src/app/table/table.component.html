@@ -1,1 +1,22 @@
-<p>table works!</p>
+<table>
+  <thead>
+    <tr>
+      <th>Ano</th>
+      <th>Valor Investido</th>
+      <th>Juros do Ano</th>
+      <th>Total de Juros</th>
+      <th>Capital Investido</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(data of AnnualData; track data.year){
+      <tr>
+        <td>{{data.year}}</td>
+        <td>{{data.interest}}</td>
+        <td>{{data.valueEndOfYear}}</td>
+        <td>{{data.totalInterest}}</td>
+        <td>{{data.totalAmountInvested}}</td>
+      </tr>
+    }
+  </tbody>
+</table>

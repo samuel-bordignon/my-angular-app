@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { AnnualData } from '../calculator/calculator.model';
 
 @Component({
   selector: 'app-table',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './table.component.css'
 })
 export class TableComponent {
-
+  @Input({required:true}) AnnualData: AnnualData = []
 }
