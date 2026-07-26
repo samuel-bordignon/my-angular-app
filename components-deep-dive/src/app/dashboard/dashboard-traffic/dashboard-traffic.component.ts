@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { DashboardCardComponent } from '../dashboard-card.component';
+import { DashboardComponet } from '../dashboard.component';
 
 @Component({
   selector: 'app-dashboard-traffic',
   standalone: true,
-  imports: [DashboardCardComponent],
+  imports: [DashboardComponet],
   templateUrl: './dashboard-traffic.component.html',
   styleUrl: './dashboard-traffic.component.css'
 })
