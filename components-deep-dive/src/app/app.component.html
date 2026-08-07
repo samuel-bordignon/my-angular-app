@@ -1,8 +1,14 @@
 <header appHeader></header>
 <main>
   <div id="dashboard">
-    <app-dashboard-status-server />
-    <app-dashboard-traffic />
-    <app-dashboard-suport />
+    <app-dashboard-card image_alt="A signal symbol" image_url="status.png" title="">
+      <app-dashboard-status-server />
+    </app-dashboard-card>
+    <app-dashboard-card image_alt="A list of items" image_url="list.png" title="Support Tickets">
+      <app-dashboard-traffic />
+    </app-dashboard-card>
+    <app-dashboard-card image_alt="A list of items" image_url="list.png" title="Support Tickets">
+      <app-dashboard-suport />
+    </app-dashboard-card>
   </div>
 </main>

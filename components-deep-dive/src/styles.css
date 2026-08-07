@@ -33,10 +33,6 @@ main {
   }
 }
 
-#traffic {
-  display: block;
-  width: 15rem;
-}
 
 p {
   margin: 0 0 1rem 0;
@@ -60,26 +56,8 @@ p {
   border-top-right-radius: 4px;
 }
 
-@media (min-width: 768px) {
-  #traffic {
-    width: 20rem;
-  }
-}
 
-.status p:first-of-type {
-  font-weight: bold;
-  animation: pulse 2s infinite;
-  margin: 0 0 0.5rem 0;
-  font-size: 1.15rem;
-}
 
-.status-online p:first-of-type {
-  color: #6a3cb0;
-}
-
-.status-offline p:first-of-type {
-  color: #b22084;
-}
 
 .status-unknown p:first-of-type {
   color: grey;
@@ -107,10 +85,4 @@ h2 {
   font-size: 0.9rem;
   text-transform: uppercase;
   color: #504e50;
-}
-
-@media (min-width: 768px) {
-  .dashboard-item {
-    padding: 2rem;
-  }
 }

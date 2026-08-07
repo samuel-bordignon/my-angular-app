@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { DashboardComponet } from '../dashboard.component';
+import { NewTicketComponent } from "./new-ticket/new-ticket.component";
 
 @Component({
   selector: 'app-dashboard-suport',
   standalone: true,
-  imports: [DashboardComponet],
+  imports: [NewTicketComponent],
   templateUrl: './dashboard-suport.component.html',
   styleUrl: './dashboard-suport.component.css'
 })

@@ -3,17 +3,19 @@ import { DashboardStatusServerComponent } from './dashboard/dashboard-status-ser
 import { DashboardTrafficComponent } from './dashboard/dashboard-traffic/dashboard-traffic.component';
 import { DashboardSuportComponent } from './dashboard/dashboard-suport/dashboard-suport.component';
 import { HeaderComponent } from './header/header.component';
+import { DashboardComponet } from "./dashboard/dashboard.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
-  imports:[
+  imports: [
     DashboardStatusServerComponent,
     DashboardTrafficComponent,
     DashboardSuportComponent,
-    HeaderComponent
-  ]
+    HeaderComponent,
+    DashboardComponet
+]
 })
 export class AppComponent {
 }

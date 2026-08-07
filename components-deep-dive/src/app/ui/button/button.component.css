@@ -11,7 +11,7 @@
   border: none;
 }
 
-button:hover {
+:host:hover {
   background-color: #551b98;
 }
 
@@ -21,6 +21,6 @@ button:hover {
   transition: transform 0.2s ease-in-out;
 }
 
-button:hover .icon {
+:host:hover .icon {
   transform: translateX(4px);
 }
