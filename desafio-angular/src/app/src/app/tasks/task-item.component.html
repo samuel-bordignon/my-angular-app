@@ -1,0 +1,13 @@
+<div style="display:flex;justify-content:space-between;align-items:center;border:1px solid #e5e7eb;border-radius:8px;padding:12px;">
+  <label style="display:flex;align-items:center;gap:8px;">
+    <!-- PROBLEMA: evento errado -->
+    <input type="checkbox" [checked]="task.done" (change)="toggle.emit(task.idd)">
+
+    <span [class.done]="task.done">
+      {{ task.title }}
+    </span>
+  </label>
+
+  <!-- PROBLEMA: propriedade errada -->
+  <button (click)="remove.emit(task.identifier)">Remover</button>
+</div>

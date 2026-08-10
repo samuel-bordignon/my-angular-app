@@ -1,0 +1,9 @@
+<div style="display:flex;align-items:center;gap:12px;">
+  <button (click)="decrement()">-</button>
+
+  <strong [style.color]="value > 10 ? 'green' : 'black'">
+    {{ value }}
+  </strong>
+
+  <button (click)="increment()">+</button>
+</div>

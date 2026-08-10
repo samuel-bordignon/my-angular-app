@@ -1,0 +1,13 @@
+<div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+  <!-- PROBLEMA: src não está com property binding -->
+  <img src="avatar" width="80" height="80" style="border-radius:50%">
+
+  <strong>{{ name }}</strong>
+
+  <!-- PROBLEMA: classe invertida -->
+  <span [class.online]="!online" [class.offline]="online">
+    {{ online ? 'Online' : 'Offline' }}
+  </span>
+
+  <button (click)="changeAvatar()">Trocar avatar</button>
+</div>

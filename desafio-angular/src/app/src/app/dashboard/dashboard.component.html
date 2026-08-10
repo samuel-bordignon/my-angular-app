@@ -1,0 +1,50 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+
+  <div class="grid">
+
+    <div class="card">
+      <h2>Contador</h2>
+      <app-counter></app-counter>
+    </div>
+
+    <div class="card">
+      <h2>Usuário</h2>
+      <app-user-profile></app-user-profile>
+    </div>
+
+    <div class="card">
+      <h2>Configurações</h2>
+      <app-settings></app-settings>
+    </div>
+
+    <div class="card">
+      <h2>Notificação</h2>
+      <app-notification [message]="'Atualização disponível'"></app-notification>
+    </div>
+
+    <div class="card">
+      <h2>Produto</h2>
+      <app-product-card></app-product-card>
+    </div>
+
+  </div>
+
+  <div style="margin-top: 24px;">
+    <app-task-list></app-task-list>
+  </div>
+
+  <div class="card" style="margin-top: 24px;">
+    <h2>Bindings dinâmicos</h2>
+
+    <!-- PROBLEMAS INTENCIONAIS -->
+
+    <p [hidden]="false">Este texto deveria esconder no dark mode.</p>
+
+    <button [disabled]="darkMode == false">
+      Botão deveria desabilitar quando darkMode for true
+    </button>
+
+    <div [style.width]="progress" style="height: 10px; background: #2563eb; margin-top: 16px;"></div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div style="display:flex;flex-direction:column;gap:12px;">
+
+  <div>
+    <label>Usuário</label>
+    <input [(ngModel)]="username">
+  </div>
+
+  <div>
+    <label>E-mail</label>
+
+    <!-- PROBLEMA: binding incorreto -->
+    <input [ngModel]="email">
+  </div>
+
+  <label style="display:flex;align-items:center;gap:8px;">
+    <!-- PROBLEMA: checkbox não sincroniza -->
+    <input type="checkbox" [checked]="notifications">
+
+    Receber notificações
+  </label>
+
+  <pre>{{ {username, email, notifications} | json }}</pre>
+</div>

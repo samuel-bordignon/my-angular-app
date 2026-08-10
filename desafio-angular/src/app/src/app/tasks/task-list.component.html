@@ -1,0 +1,24 @@
+<div class="card">
+  <h2>Tarefas</h2>
+
+  <input [(ngModel)]="search" placeholder="Buscar tarefa">
+
+  <div style="display:flex;gap:8px;margin-top:12px;">
+    <input [(ngModel)]="newTask" placeholder="Nova tarefa">
+    <button (click)="addTask()">Adicionar</button>
+  </div>
+
+  <p style="margin-top:12px;">
+    Concluídas: {{ tasks.filter(t => t.done).length }}
+  </p>
+
+  <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px;">
+    <!-- PROBLEMA: busca não aplicada -->
+    <app-task-item
+      *ngFor="let task of tasks"
+      [task]="task"
+      (remove)="removeTask($event)"
+      (toggle)="toggleTask($event)">
+    </app-task-item>
+  </div>
+</div>

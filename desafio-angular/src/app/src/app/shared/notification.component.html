@@ -1,0 +1,6 @@
+<div *ngIf="visible" style="padding:12px;background:#ecfeff;border:1px solid #a5f3fc;border-radius:8px;display:flex;justify-content:space-between;align-items:center;">
+  <span>{{ message }}</span>
+
+  <!-- PROBLEMA: não altera o estado -->
+  <button (click)="visible">Fechar</button>
+</div>
