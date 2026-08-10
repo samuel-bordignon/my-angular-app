@@ -1,5 +1,5 @@
-<div style="display:flex;justify-content:space-between;align-items:center;border:1px solid #e5e7eb;border-radius:8px;padding:12px;">
-  <label style="display:flex;align-items:center;gap:8px;">
+<div class="flex justify-between items-center border-[#e5e7eb] rounded-lg p-3">
+  <label class="flex items-center gap-2">
     <!-- PROBLEMA: evento errado -->
     <input type="checkbox" [checked]="task.done" (change)="taskToggle.emit(task.id)">
 

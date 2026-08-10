@@ -12,7 +12,7 @@
     Concluídas: {{ tasks.filter(t => t.done).length }}
   </p>
 
-  <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px;">
+  <div class="flex flex-col gap-2 mt-3">
     <!-- PROBLEMA: busca não aplicada -->
     <app-task-item
       *ngFor="let task of tasks"
