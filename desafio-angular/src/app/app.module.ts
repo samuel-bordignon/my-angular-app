@@ -13,6 +13,7 @@ import { ProductCardComponent } from './products/product-card.component';
 import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
+  // PROBLEMA: os componentes não estão de acordo com a nova versão do angular
   declarations: [
     AppComponent,
     DashboardComponent,
