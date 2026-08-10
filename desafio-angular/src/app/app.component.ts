@@ -3,7 +3,7 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 
 @Component({
   selector: 'app-root',
-  template: `<app-dashboard></app-dashboard>`,
-  imports: [DashboardComponent]
+  templateUrl: './app.component.html',
+  imports: [DashboardComponent],
 })
-export class AppComponent {}
+export class AppComponent { }

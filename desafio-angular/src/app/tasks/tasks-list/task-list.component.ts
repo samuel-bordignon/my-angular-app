@@ -1,14 +1,19 @@
-import { Component } from '@angular/core';
+import { Component,  } from '@angular/core';
+import { Task } from '../task.model';
+import { TaskItemComponent } from "../tasks-item/task-item.component";
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-task-list',
-  templateUrl: './task-list.component.html'
+  templateUrl: './task-list.component.html',
+  imports: [TaskItemComponent, FormsModule]
 })
 export class TaskListComponent {
   search = '';
   newTask = '';
 
-  tasks = [
+  tasks: Task[] = [
     { id: 1, title: 'Estudar @Input', done: false },
     { id: 2, title: 'Praticar ngModel', done: true },
     { id: 3, title: 'Revisar event binding', done: false }

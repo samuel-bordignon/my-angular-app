@@ -18,7 +18,7 @@
       *ngFor="let task of tasks"
       [task]="task"
       (remove)="removeTask($event)"
-      (toggle)="toggleTask($event)">
+      (taskToggle)="toggleTask($event)">
     </app-task-item>
   </div>
 </div>
