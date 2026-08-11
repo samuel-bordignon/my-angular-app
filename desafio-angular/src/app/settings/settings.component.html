@@ -9,13 +9,13 @@
     <label>E-mail</label>
 
     <!-- PROBLEMA: binding incorreto -->
-    <input [ngModel]="email">
+    <input [(ngModel)]="email">
   </div>
 
   <label class="flex items-center gap-2">
     <!-- PROBLEMA: checkbox não sincroniza -->
-    <input type="checkbox" [checked]="notifications">
-
+    <input type="checkbox" [(ngModel)]="notifications">
+    
     Receber notificações
   </label>
 
