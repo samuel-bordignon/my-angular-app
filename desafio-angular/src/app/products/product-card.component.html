@@ -2,10 +2,12 @@
   <strong>{{ name }}</strong>
 
   <!-- PROBLEMA: pipe ausente -->
-  <span>{{ price }}</span>
+  <span>{{ price | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</span>
 
   <!-- PROBLEMA: cálculo errado -->
-  <span>Com desconto: {{ price - discount }}</span>
+  <span class="text-green-600">
+    Com desconto: {{ price - (price * discount) | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}
+  </span>
 
   <button>Comprar</button>
 </div>
