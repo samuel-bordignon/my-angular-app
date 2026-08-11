@@ -1,8 +1,9 @@
-<div class="flex flex-col items-center gap-3">
-  <!-- PROBLEMA: src não está com property binding ✓ -->
-  <img [src]="avatar" width="80" height="80" class="rounded-[50%]">
 
-  <strong>{{ name }}</strong>
+  <!-- PROBLEMA: src não está com property binding ✓ -->
+   <div class=" flex items-center gap-4">
+     <Span class="text-2xl">{{ name }}</Span>
+     <img [src]="avatar" class="h-15 rounded-full outline-3 outline-offset-2 outline-ayu-keyword">
+   </div>
 
   <!-- PROBLEMA: classe invertida ✓ --> 
   <span [class.online]="online" [class.offline]="!online">
@@ -10,4 +11,3 @@
   </span>
 
   <button (click)="changeAvatar()">Trocar avatar</button>
-</div>

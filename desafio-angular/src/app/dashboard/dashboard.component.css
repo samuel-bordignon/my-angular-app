@@ -1,0 +1,42 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  gap:12px;
+}
+
+:host h1 {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+:host h1::after {
+  content: "";
+  position: absolute;
+  /* Posiciona a linha na base do texto */
+  bottom: 2px; 
+  left: 140px;
+  /* Define a largura total e a espessura da linha */
+  width: 160px;
+  height: 6px; 
+  /* Escolha a cor do seu sublinhado */
+  background-color: #F29718; 
+  /* Envia a linha para trás do texto */
+  z-index: -1; 
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}

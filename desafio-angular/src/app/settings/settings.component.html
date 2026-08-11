@@ -15,9 +15,15 @@
   <label class="flex items-center gap-2">
     <!-- PROBLEMA: checkbox não sincroniza -->
     <input type="checkbox" [(ngModel)]="notifications">
-    
+
     Receber notificações
   </label>
 
-  <pre>{{ {username, email, notifications} | json }}</pre>
+  <code class="bg-[#1E1E1E] text-[#F8F8F2] p-4 rounded-sm">
+    &#123;<br>
+      <span class="text-[#BD93F9] ml-4">username:</span>{{username}},<br>
+      <span class="text-[#BD93F9] ml-4">email: </span>{{email}},<br>
+      <span class="text-[#BD93F9] ml-4">notifications: </span>{{notifications}}<br>
+    &#123;
+</code>
 </div>

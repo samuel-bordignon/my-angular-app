@@ -1,7 +1,7 @@
 <div class="flex justify-between items-center border-[#e5e7eb] rounded-lg p-3">
   <label class="flex items-center gap-2">
     <!-- PROBLEMA: evento errado -->
-    <input type="checkbox" [checked]="task.done" (change)="taskToggle.emit(task.id)">
+    <input type="checkbox" [(ngModel)]="task.done" (change)="taskToggle.emit(task.id)">
 
     <span [class.done]="task.done">
       {{ task.title }}

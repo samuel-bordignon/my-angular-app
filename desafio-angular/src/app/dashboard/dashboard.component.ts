@@ -9,6 +9,7 @@ import { CounterComponent } from "../counter/counter.component";
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css'],
   imports: [SettingsComponent, UserProfileComponent, NotificationComponent, ProductCardComponent, TaskListComponent, CounterComponent]
 })
 export class DashboardComponent {
