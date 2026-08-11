@@ -13,6 +13,8 @@ export class CounterComponent {
 
   decrement() {
     // PROBLEMA: incrementa em vez de decrementar
-    this.value++;
+    if(this.value >= 1){
+      this.value--;
+    }
   }
 }
