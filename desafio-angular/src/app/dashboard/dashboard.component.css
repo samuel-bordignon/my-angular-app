@@ -17,15 +17,26 @@
   content: "";
   position: absolute;
   /* Posiciona a linha na base do texto */
-  bottom: 2px; 
-  left: 140px;
+  bottom: 14px; 
+  left: 139px;
   /* Define a largura total e a espessura da linha */
-  width: 160px;
+  width: 163px;
   height: 6px; 
   /* Escolha a cor do seu sublinhado */
   background-color: #F29718; 
   /* Envia a linha para trás do texto */
   z-index: -1; 
+  /* Transição para animação suave ao alterar "left" */
+  transition: left 0.5s ease;
+  border-radius: 4px;
+}
+
+/* Aplicar hover no elemento pai (h1) para afetar o ::after */
+:host h1:hover::after {
+  left: -2px;
+  width: 134px;
+  height: 48px; 
+  border-radius: 4px;
 }
 
 .card {
