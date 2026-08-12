@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './dashboard-status-server.component.css'
 })
 export class DashboardStatusServerComponent {
-  currentStatus: 'offline' | 'online' | unknown = 'offline'
+  currentStatus: 'offline' | 'online' | unknown = 'online'
 }
