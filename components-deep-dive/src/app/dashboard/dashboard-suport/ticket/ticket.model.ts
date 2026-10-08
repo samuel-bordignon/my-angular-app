@@ -3,5 +3,9 @@ export type Ticket = {
   title: string
   request: string
   status: 'open' | 'closed'
+}
 
+export type TicketPayload = {
+  title: string,
+  text: string
 }
