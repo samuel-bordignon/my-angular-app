@@ -5,16 +5,24 @@ import { CreateOrderPayload } from '../order.model';
 
 @Component({
   imports: [FormsModule],
-  selector: 'app-new-order.component',
+  selector: 'app-new-order',
   styleUrl: './new-order.component.css',
   templateUrl: './new-order.component.html',
 })
 export class NewOrderComponent {
   private orderService = inject(OrderService)
-  
-  onSubmit(data: CreateOrderPayload): void {
+
+  data: CreateOrderPayload = {
+    clientName: "",
+    device:"",
+    issueDescription:"",
+    price: 0,
+    priority:"Baixa"
+  }
+
+  onSubmit(): void {
     this.orderService.addOrder({
-      ...data,
+      ...this.data,
       id: crypto.randomUUID(),
       status: 'Recebido',
       createdAt: new Date().toISOString()

@@ -1,13 +1,20 @@
-<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+<form (ngSubmit)="onSubmit()" class="flex flex-col bg-gray-50">
+
   <label for="clientName">Nome do cliente</label>
-  <input type="text" id="clientName" name="clientName" ngModel required>
+  <input class="bg-amber-50" type="text" id="clientName" name="clientName" [(ngModel)]="data.clientName" required>
   <label for="device">Aparelho</label>
-  <input type="text" id="device" name="device" ngModel required>
+  <input class="bg-amber-50" type="text" id="device" name="device" [(ngModel)]="data.device" required>
   <label for="issueDescription">Descrição do problema</label>
-  <textarea id="issueDescription" name="issueDescription" rows="3" ngModel required></textarea>
-  <button type="submit">Cadastrar</button>
+  <textarea class="bg-amber-50" id="issueDescription" name="issueDescription" rows="3" [(ngModel)]="data.issueDescription"
+    required></textarea>
   <label for="price">Valor Atendimento</label>
-  <input type="number" id="price" name="price" ngModel required>
+  <input class="bg-amber-50" type="number" id="price" name="price" [(ngModel)]="data.price" required>
   <label for="priority">Valor Atendimento</label>
-  <select id="priority" name="priority" ngModel required>
+  <select class="bg-amber-50" id="priority" name="priority" [(ngModel)]="data.priority" required>
+    <option value="Baixa">Baixa</option>
+    <option value="Baixa">Média</option>
+    <option value="Baixa">Alta</option>
+  </select>
+  
+  <button type="submit">Cadastrar</button>
 </form>
