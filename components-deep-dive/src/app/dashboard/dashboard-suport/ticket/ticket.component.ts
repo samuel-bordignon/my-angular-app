@@ -11,11 +11,18 @@ import { Ticket } from './ticket.model';
 export class TicketComponent {
   ticket = input.required<Ticket>()
   isOpenTicket = signal(false)
+  detailsVisible = signal(false)
   add = output<string>()
 
-  submitTask(id:string){
+  isClosedeTicket = true
+
+  onToggleDetails() {
+    this.detailsVisible.update((wasVisible) => !wasVisible)
+  }
+
+  submitTask(id: string) {
     this.add.emit(id)
   }
 
-  
+
 }
